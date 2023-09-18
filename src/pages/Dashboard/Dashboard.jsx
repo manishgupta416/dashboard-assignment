@@ -14,6 +14,17 @@ const Dashboard = () => {
       >
         Logout
       </button>
+      <div className="dashboard-container">
+        <div className="left-menu-side">
+          <div className="left-menu-side"></div>
+        </div>
+        <div className="right-side">
+          <div className="nav"></div>
+          <div className="card"></div>
+          <div className="activities-graph"></div>
+          <div className="pie"></div>
+        </div>
+      </div>
     </div>
   );
 };
