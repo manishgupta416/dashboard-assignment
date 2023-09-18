@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./SignIn.css";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
@@ -8,11 +8,23 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { AiOutlineApple } from "react-icons/ai";
 import { useAuth0 } from "@auth0/auth0-react";
+import { DataContext } from "../../context/DataContext";
 
 const SignIn = () => {
-  const { loginWithRedirect } = useAuth0();
-  const { user, isAuthenticated, isLoading } = useAuth0();
-  console.log(user);
+  const navigate = useNavigate();
+  const { loginWithRedirect, user, isAuthenticated } = useAuth0();
+
+  const { setCurrentUser, currentUser, setIsAuthenticated, check } =
+    useContext(DataContext);
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/home");
+    }
+    setIsAuthenticated(isAuthenticated);
+    setCurrentUser(user);
+  }, [isAuthenticated]);
+  console.log(currentUser);
+  console.log(isAuthenticated);
   return (
     <>
       <div className="main-login-container">
