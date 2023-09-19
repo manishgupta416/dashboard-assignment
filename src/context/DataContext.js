@@ -4,6 +4,8 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState({});
   const [isauthenticated, setIsAuthenticated] = useState(false);
+  const [profileDetails, setProfileDetails] = useState({});
+
   return (
     <DataContext.Provider
       value={{
@@ -12,6 +14,8 @@ export const DataProvider = ({ children }) => {
         setCurrentUser,
         isauthenticated,
         setIsAuthenticated,
+        profileDetails,
+        setProfileDetails,
       }}
     >
       {children}

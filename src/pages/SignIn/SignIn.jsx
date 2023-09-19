@@ -9,6 +9,7 @@ import { FcGoogle } from "react-icons/fc";
 import { AiOutlineApple } from "react-icons/ai";
 import { useAuth0 } from "@auth0/auth0-react";
 import { DataContext } from "../../context/DataContext";
+import Dashboard from "../Dashboard/Dashboard";
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -18,13 +19,20 @@ const SignIn = () => {
     useContext(DataContext);
   useEffect(() => {
     if (isAuthenticated) {
+      localStorage.setItem(
+        "loginDetails",
+        JSON.stringify({
+          user: user,
+        })
+      );
       navigate("/home");
     }
     setIsAuthenticated(isAuthenticated);
-    setCurrentUser(user);
   }, [isAuthenticated]);
-  console.log(currentUser);
-  console.log(isAuthenticated);
+  // console.log("curr", currentUser);
+
+  // console.log("curr", currentUser);
+  // console.log(isAuthenticated);
   return (
     <>
       <div className="main-login-container">

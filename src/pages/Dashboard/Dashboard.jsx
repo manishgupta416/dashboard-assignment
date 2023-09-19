@@ -1,28 +1,229 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Dashboard.css";
 import { useAuth0 } from "@auth0/auth0-react";
+import { MdDashboard } from "react-icons/md";
+import { MdDiscount } from "react-icons/md";
+import { BiSolidTimeFive } from "react-icons/bi";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { AiTwotoneSetting } from "react-icons/ai";
+import { MdNotificationsNone } from "react-icons/md";
+import { FiSearch } from "react-icons/fi";
+import { PiUsersBold } from "react-icons/pi";
+import { BiLike } from "react-icons/bi";
+import { CiMoneyBill } from "react-icons/ci";
+import { GrAddCircle } from "react-icons/gr";
+import BarGraph from "../../components/BarGraph/BarGraph";
+import DoughnutChart from "../../DoughnutChart/DoughnutChart";
+import { DataContext } from "../../context/DataContext";
+import AddProfile from "../../components/AddProfile/AddProfile";
 
-const Dashboard = () => {
+const Dashboard = ({ userDetails }) => {
   const { logout, user, isAuthenticated } = useAuth0();
+  const localStorageData = JSON.parse(localStorage.getItem("loginDetails"));
+
+  const [currentUser, setCurrentUser] = useState(localStorageData?.user);
+  console.log(currentUser);
+  const { profileDetails } = useContext(DataContext);
+  const [showAddProfilePopup, setShowAddProfilePopup] = useState(false);
+
+  const handleAddProfile = () => {
+    setShowAddProfilePopup(!showAddProfilePopup);
+    setShowProfile(true);
+  };
+  const [showProfile, setShowProfile] = useState(false);
+
   return (
     <div>
-      Dashboard
-      <button
-        onClick={() =>
-          logout({ logoutParams: { returnTo: window.location.origin } })
-        }
-      >
-        Logout
-      </button>
       <div className="dashboard-container">
         <div className="left-menu-side">
-          <div className="left-menu-side"></div>
+          <div className="left-menu-side">
+            <div className="menu-contain">
+              <div className="board">Board</div>
+              <div className="sp-btw">
+                <div className="align-c gap">
+                  <span className="span-icon">
+                    <MdDashboard />
+                  </span>
+                  <span>Dashboard</span>
+                </div>
+                <div className="align-c  gap">
+                  <span className="span-icon">
+                    <MdDiscount />
+                  </span>
+                  <span>Transactions</span>
+                </div>
+                <div className="align-c gap">
+                  <span className="span-icon">
+                    <BiSolidTimeFive />
+                  </span>
+                  <span> Sechdules</span>
+                </div>
+                <div className="align-c gap">
+                  <span className="span-icon">
+                    {" "}
+                    <MdOutlineAccountCircle />
+                  </span>
+                  <span>Users</span>
+                </div>
+                <div className="align-c gap">
+                  <span className="span-icon">
+                    <AiTwotoneSetting />
+                  </span>
+                  <span> Settings</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>Help</div>
+              <div>Contact Us</div>
+            </div>
+          </div>
         </div>
         <div className="right-side">
-          <div className="nav"></div>
-          <div className="card"></div>
-          <div className="activities-graph"></div>
-          <div className="pie"></div>
+          <div className="nav">
+            <div>Dashboard</div>
+            <div className="nav-right">
+              <div className="search-input">
+                <input className="inp" type="text" placeholder="Search..." />
+                <span className="search-icon">
+                  <FiSearch />
+                </span>
+              </div>
+              <div className="noti-icon">
+                <MdNotificationsNone />
+              </div>
+              <div>
+                <img
+                  className="avatar"
+                  src={currentUser.picture}
+                  alt={currentUser.nickname}
+                />
+              </div>
+              <button
+                className="login-button"
+                onClick={() =>
+                  logout({ logoutParams: { returnTo: window.location.origin } })
+                }
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-items">
+              <div>
+                <span>
+                  <MdDiscount />
+                </span>
+              </div>
+              <div>Total Revenues</div>
+              <div className="sp-btw-flx">
+                <div>$22,5656</div>
+                <div>
+                  <span>+2.5%</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-items">
+              <div>
+                <span>
+                  <CiMoneyBill />
+                </span>
+              </div>
+              <div>Total Transactions</div>
+              <div className="sp-btw-flx">
+                <div>1,520</div>
+                <div>
+                  <span>+1.75%</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-items">
+              <div>
+                <span>
+                  <BiLike />
+                </span>
+              </div>
+              <div>Total Likes</div>
+              <div className="sp-btw-flx">
+                <div>9,721</div>
+                <div>
+                  <span>+1.4%</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-items">
+              <div>
+                <span>
+                  <PiUsersBold />
+                </span>
+              </div>
+              <div>Total Users</div>
+              <div className="sp-btw-flx">
+                <div>9,721</div>
+                <div>
+                  <span>+4.5%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="activities-graph">
+            <div className="b-g-flx">
+              <div className="bar-g-left">
+                <div>Activities</div>
+                <div>May-June 2021</div>
+              </div>
+              <div className="bar-g-right">
+                <div>Guest</div>
+                <div>User</div>
+              </div>
+            </div>
+            <div
+              style={{ width: "80%", margin: "0 auto" }}
+              className="bar-chart"
+            >
+              <BarGraph />
+            </div>
+          </div>
+          <div className="pie">
+            <div className="pie-chart">
+              <div className="pie-flx">
+                <div>Top Products</div>
+                <div>May June 2021</div>
+              </div>
+              <DoughnutChart />
+            </div>
+            <div className="profile-conatiner">
+              {showProfile && profileDetails.name !== "" ? (
+                <div className="wi">
+                  <div>{profileDetails?.name}</div>
+                  <div className="flx">
+                    <div className="cont">
+                      <div>{profileDetails?.phone}</div>
+                      <div>{profileDetails?.email}</div>
+                    </div>
+                    <div className="cont">
+                      <div>{profileDetails?.instagram}</div>
+                      <div>{profileDetails?.youtube}</div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div onClick={handleAddProfile}>
+                  <span>
+                    <GrAddCircle />
+                  </span>
+                </div>
+              )}
+
+              {showAddProfilePopup && (
+                <AddProfile onClose={() => setShowAddProfilePopup(false)} />
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
