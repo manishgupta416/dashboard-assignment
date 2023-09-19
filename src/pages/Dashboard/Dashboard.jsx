@@ -36,6 +36,16 @@ const Dashboard = ({ userDetails }) => {
   };
   const [showProfile, setShowProfile] = useState(false);
   console.log("ppppp", profileDetails);
+
+  const handleLogout = async () => {
+    try {
+      await logout({ logoutParams: { returnTo: window.location.origin } });
+      localStorage.removeItem("loginDetails");
+      setCurrentUser(null);
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
   return (
     <div>
       <div className="dashboard-container">
@@ -99,16 +109,11 @@ const Dashboard = ({ userDetails }) => {
               <div>
                 <img
                   className="avatar"
-                  src={currentUser.picture}
-                  alt={currentUser.nickname}
+                  src={currentUser?.picture}
+                  alt={currentUser?.nickname}
                 />
               </div>
-              <button
-                className="login-button"
-                onClick={() =>
-                  logout({ logoutParams: { returnTo: window.location.origin } })
-                }
-              >
+              <button className="login-button" onClick={handleLogout}>
                 Logout
               </button>
             </div>
