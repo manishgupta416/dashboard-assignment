@@ -73,13 +73,13 @@ const SignIn = () => {
                 <span className="align-c">
                   <FcGoogle />
                 </span>{" "}
-                <span> Sign in with Google</span>
+                <span className="txt-none"> Sign in with Google</span>
               </div>
               <div className="g-a">
                 <span className="align-c">
                   <AiOutlineApple />
                 </span>{" "}
-                <span> Sign in with Apple</span>
+                <span className="txt-none"> Sign in with Apple</span>
               </div>
             </div>
             <div className="login-inp-contai">
@@ -89,7 +89,7 @@ const SignIn = () => {
                 </div>
                 <div>
                   <input
-                    className="inp-pd lg-inp"
+                    className="inp-pd lg-inp inp-res inp-res"
                     type="text"
                     // placeholder="Eg. Manish Gupta"
                     required
@@ -103,7 +103,7 @@ const SignIn = () => {
                 </div>
                 <div>
                   <input
-                    className="inp-pd lg-inp"
+                    className="inp-pd lg-inp inp-res"
                     type="password"
                     // placeholder="Eg. Manish Gupta"
                     required

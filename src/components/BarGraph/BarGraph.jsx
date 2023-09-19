@@ -26,12 +26,12 @@ const BarGraph = () => {
   };
 
   return (
-    <div style={{ width: "500px", height: "400px" }}>
+    <div className="bar-c " style={{ width: "500px", height: "400px" }}>
       <Bar
         className="canvas"
         data={state}
         options={{
-          responsive: false,
+          responsive: true,
           maintainAspectRatio: false,
           title: {
             display: true,
@@ -46,8 +46,8 @@ const BarGraph = () => {
             enabled: true, // Enable tooltips
           },
         }}
-        width={500}
-        height={300}
+        // width={500}
+        // height={300}
       />
     </div>
   );

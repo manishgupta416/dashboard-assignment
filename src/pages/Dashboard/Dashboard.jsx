@@ -20,7 +20,8 @@ import BarGraph from "../../components/BarGraph/BarGraph";
 import DoughnutChart from "../../DoughnutChart/DoughnutChart";
 import { DataContext } from "../../context/DataContext";
 import AddProfile from "../../components/AddProfile/AddProfile";
-
+import { MdMenu, MdClose } from "react-icons/md";
+import Menu from "../../components/Menu/Menu";
 const Dashboard = ({ userDetails }) => {
   const { logout, user, isAuthenticated } = useAuth0();
   const localStorageData = JSON.parse(localStorage.getItem("loginDetails"));
@@ -46,10 +47,20 @@ const Dashboard = ({ userDetails }) => {
       console.error("Logout error:", error);
     }
   };
+
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+    console.log("hhhhhhh");
+  };
   return (
     <div>
+      <span className="span-icon" onClick={toggleMenu}>
+        {/* <MdDashboard /> */}
+      </span>
       <div className="dashboard-container">
-        <div className="left-menu-side">
+        <div className="left-menu-side none menu-width">
           <div className="left-menu-side">
             <div className="menu-contain">
               <div className="board">Board</div>
@@ -93,11 +104,18 @@ const Dashboard = ({ userDetails }) => {
             </div>
           </div>
         </div>
+        {showMenu && <Menu onClose={() => setShowMenu(false)} />}
+
         <div className="right-side">
           <div className="nav">
-            <div className="nav-heading">Dashboard</div>
+            <div className="menu-ic">
+              <span onClick={toggleMenu}>
+                <MdMenu />
+              </span>
+            </div>
+            <div className="nav-heading"> Dashboard</div>
             <div className="nav-right">
-              <div className="search-input">
+              <div className="search-input srch-none">
                 <input className="inp" type="text" placeholder="Search..." />
                 <span className="search-icon">
                   <FiSearch />
@@ -197,9 +215,9 @@ const Dashboard = ({ userDetails }) => {
             </div>
             <div
               style={{ width: "80%", margin: "0 auto" }}
-              className="bar-chart"
+              className="bar-chart canvas"
             >
-              <BarGraph />
+              <BarGraph className="canvas" />
             </div>
           </div>
           <div className="pie">

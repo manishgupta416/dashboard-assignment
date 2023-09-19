@@ -95,6 +95,9 @@
   border-radius: 14px;
   /* width: 200px;
   height: 200px; */
+  height: 100vh;
+  /* height: 100vh;
+  width: 100vw; */
 }
 .b-g-flx {
   display: flex;
@@ -366,4 +369,70 @@
 .em {
   color: #d14836;
   font-size: large;
+}
+@media screen and (max-width: 895px) {
+  .activities-graph {
+    height: 59vh;
+  }
+  .bar-c {
+    height: 240px;
+    width: 381px;
+  }
+  .canvas {
+    height: 240px;
+    width: 381px;
+  }
+  canvas {
+    height: 240px;
+    width: 381px;
+  }
+  .card {
+    height: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+.menu-ic {
+  display: none;
+}
+@media screen and (max-width: 770px) {
+  .none {
+    display: none;
+  }
+  .menu-ic {
+    display: block;
+  }
+  .menu-width {
+    min-width: 157vh;
+  }
+}
+@media screen and (max-width: 549px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+  .srch-none {
+    display: none;
+  }
+}
+@media screen and (max-width: 597px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+  .srch-none {
+    display: none;
+  }
+  .inp-res {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 516px) {
+  .txt-none {
+    display: none;
+  }
+  .g-a {
+    padding: 0;
+  }
+  .inp-res {
+    width: 30px;
+  }
 }
