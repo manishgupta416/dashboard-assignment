@@ -31,7 +31,7 @@ const Dashboard = ({ userDetails }) => {
     setShowProfile(true);
   };
   const [showProfile, setShowProfile] = useState(false);
-
+  console.log("ppppp", profileDetails);
   return (
     <div>
       <div className="dashboard-container">
@@ -73,15 +73,15 @@ const Dashboard = ({ userDetails }) => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="left-bottm">
               <div>Help</div>
-              <div>Contact Us</div>
+              <div className="cont">Contact Us</div>
             </div>
           </div>
         </div>
         <div className="right-side">
           <div className="nav">
-            <div>Dashboard</div>
+            <div className="nav-heading">Dashboard</div>
             <div className="nav-right">
               <div className="search-input">
                 <input className="inp" type="text" placeholder="Search..." />
@@ -112,60 +112,60 @@ const Dashboard = ({ userDetails }) => {
           <div className="card">
             <div className="card-items">
               <div>
-                <span>
+                <span className="total-rev">
                   <MdDiscount />
                 </span>
               </div>
               <div>Total Revenues</div>
               <div className="sp-btw-flx">
-                <div>$22,5656</div>
+                <div className="bold">$22,5656</div>
                 <div>
-                  <span>+2.5%</span>
+                  <span className="round">+2.5%</span>
                 </div>
               </div>
             </div>
 
             <div className="card-items">
               <div>
-                <span>
+                <span className="total-tran">
                   <CiMoneyBill />
                 </span>
               </div>
               <div>Total Transactions</div>
               <div className="sp-btw-flx">
-                <div>1,520</div>
+                <div className="bold">1,520</div>
                 <div>
-                  <span>+1.75%</span>
+                  <span className="round">+1.75%</span>
                 </div>
               </div>
             </div>
 
             <div className="card-items">
               <div>
-                <span>
+                <span className="total-likes">
                   <BiLike />
                 </span>
               </div>
               <div>Total Likes</div>
               <div className="sp-btw-flx">
-                <div>9,721</div>
+                <div className="bold">9,721</div>
                 <div>
-                  <span>+1.4%</span>
+                  <span className="round">+1.4%</span>
                 </div>
               </div>
             </div>
 
             <div className="card-items">
               <div>
-                <span>
+                <span className="total-users">
                   <PiUsersBold />
                 </span>
               </div>
               <div>Total Users</div>
               <div className="sp-btw-flx">
-                <div>9,721</div>
+                <div className="bold">9,721</div>
                 <div>
-                  <span>+4.5%</span>
+                  <span className="round">+4.5%</span>
                 </div>
               </div>
             </div>
@@ -173,12 +173,17 @@ const Dashboard = ({ userDetails }) => {
           <div className="activities-graph">
             <div className="b-g-flx">
               <div className="bar-g-left">
-                <div>Activities</div>
-                <div>May-June 2021</div>
+                <div className="acti">Activities</div>
+                <div>May - June 2023</div>
               </div>
               <div className="bar-g-right">
-                <div>Guest</div>
-                <div>User</div>
+                <div className="dot-flx">
+                  {" "}
+                  <div class="g-dot"></div>Guest
+                </div>
+                <div className="dot-flx">
+                  <div class="u-dot"></div>User
+                </div>
               </div>
             </div>
             <div
@@ -194,10 +199,30 @@ const Dashboard = ({ userDetails }) => {
                 <div>Top Products</div>
                 <div>May June 2021</div>
               </div>
-              <DoughnutChart />
+              <div className="dough">
+                <div>
+                  {" "}
+                  <DoughnutChart />
+                </div>
+                <div className="label">
+                  <div>
+                    <div className="bitcoin"></div> Bitcoin
+                  </div>
+                  <div>
+                    <div className="Ethereum"></div>Ethereum
+                  </div>
+                  <div>
+                    <div className="Cardano"></div> Cardano
+                  </div>
+                  <div>
+                    <div className="Solana"></div>Solana
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div className="profile-conatiner">
-              {showProfile && profileDetails.name !== "" ? (
+              {showProfile && Object.keys(profileDetails).length !== 0 ? (
                 <div className="wi">
                   <div>{profileDetails?.name}</div>
                   <div className="flx">
@@ -213,7 +238,7 @@ const Dashboard = ({ userDetails }) => {
                 </div>
               ) : (
                 <div onClick={handleAddProfile}>
-                  <span>
+                  <span className="add-icon">
                     <GrAddCircle />
                   </span>
                 </div>

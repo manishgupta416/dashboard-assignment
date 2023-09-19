@@ -10,7 +10,7 @@ const BarGraph = () => {
     labels: ["AAPL", "GOOGL", "MSFT", "AMZN", "TSLA"],
     datasets: [
       {
-        label: "Task Metrices",
+        label: "Stock Prices",
         backgroundColor: [
           "rgba(255, 99, 132, 0.6)",
           "rgba(54, 162, 235, 0.6)",
@@ -41,6 +41,9 @@ const BarGraph = () => {
           legend: {
             display: true,
             position: "right",
+          },
+          tooltips: {
+            enabled: true, // Enable tooltips
           },
         }}
         width={500}

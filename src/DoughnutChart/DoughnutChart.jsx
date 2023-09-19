@@ -3,11 +3,10 @@ import { Doughnut } from "react-chartjs-2";
 
 const DoughnutChart = () => {
   const data = {
-    labels: ["Bitcoin", "Ethereum", "Cardano", "Solana", "Polkadot"],
     datasets: [
       {
-        data: [400, 300, 23, 150, 100],
-        backgroundColor: ["red", "blue", "yellow", "purple", "cyan"],
+        data: [400, 300, 150, 100],
+        backgroundColor: ["red", "blue", "yellow", "purple"],
       },
     ],
   };

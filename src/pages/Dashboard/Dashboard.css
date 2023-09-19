@@ -18,9 +18,23 @@
   justify-content: space-between;
   padding: 10px 5px;
   border-radius: 0.375rem;
-  padding: 10px 20px;
+  padding: 10px 15px;
   /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1); */
   border-radius: 14px;
+  height: 90vh;
+}
+.left-bottm {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  height: 60px;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cont {
+  display: flex;
 }
 .menu-contain {
   display: flex;
@@ -58,11 +72,12 @@
   width: 9rem;
   padding: 10px;
   gap: 10px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 1px 8px 3px rgba(0, 0, 0, 0.1);
 }
 .sp-btw-flx {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  cursor: pointer;
 }
 .activities-graph {
   /* width: 50%; */
@@ -75,7 +90,7 @@
   align-items: center; */
   /* justify-content: center; */
   flex-direction: column;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 1px 8px 3px rgba(0, 0, 0, 0.1);
   border-radius: 14px;
   /* width: 200px;
   height: 200px; */
@@ -133,6 +148,7 @@
   border: none;
   outline: none;
   flex: 1;
+  text-align: center;
 }
 .search-input {
   display: flex;
@@ -170,10 +186,10 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  font-size: 52px;
-  font-weight: bolder;
+  /* font-size: 52px;
+  font-weight: bolder; */
   cursor: pointer;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 1px 8px 3px rgba(0, 0, 0, 0.1);
   border-radius: 14px;
   height: 100%;
 }
@@ -190,16 +206,18 @@
   display: flex;
   width: 50%;
   flex-direction: column;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 1px 8px 3px rgba(0, 0, 0, 0.1);
   border-radius: 14px;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+  height: 100%;
 }
 .pie-flx {
   display: flex;
   gap: 12px;
+  width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .wi {
   display: flex;
@@ -223,4 +241,104 @@
 .cont {
   display: flex;
   gap: 20px;
+}
+
+.nav-heading {
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.total-rev {
+  color: #86efac;
+  font-size: large;
+}
+.total-tran {
+  color: #fdba74;
+  font-size: large;
+}
+.total-likes {
+  color: #fca5a5;
+  font-size: large;
+}
+.total-users {
+  color: #a5b4fc;
+  font-size: large;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: large;
+}
+
+.round {
+  border-radius: 20px;
+  background-color: #86efac;
+  color: green;
+}
+.acti {
+  font-weight: bolder;
+}
+.g-dot {
+  width: 20px; /* Set the width */
+  height: 20px; /* Set the height */
+  background-color: #e25535; /* Set the background color */
+  border-radius: 50%; /* Make it round */
+}
+.u-dot {
+  width: 20px; /* Set the width */
+  height: 20px; /* Set the height */
+  background-color: #86efac; /* Set the background color */
+  border-radius: 50%; /* Make it round */
+}
+.dot-flx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Polkadot {
+  width: 20px; /* Set the width */
+  height: 20px; /* Set the height */
+  background-color: cyan; /* Set the background color */
+  border-radius: 50%; /* Make it round */
+}
+.Solana {
+  width: 20px; /* Set the width */
+  height: 20px; /* Set the height */
+  background-color: purple; /* Set the background color */
+  border-radius: 50%; /* Make it round */
+}
+.Cardano {
+  width: 20px; /* Set the width */
+  height: 20px; /* Set the height */
+  background-color: yellow; /* Set the background color */
+  border-radius: 50%; /* Make it round */
+}
+.Ethereum {
+  width: 20px; /* Set the width */
+  height: 20px; /* Set the height */
+  background-color: blue; /* Set the background color */
+  border-radius: 50%; /* Make it round */
+}
+.bitcoin {
+  width: 20px; /* Set the width */
+  height: 20px; /* Set the height */
+  background-color: red; /* Set the background color */
+  border-radius: 50%; /* Make it round */
+}
+.dough {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+.label {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.add-icon {
+  font-size: xx-large;
 }

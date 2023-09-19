@@ -13,12 +13,20 @@ const AddProfile = ({ onClose }) => {
   });
   console.log(userDetails);
   const handleClose = () => {
-    setProfileDetails(userDetails);
     onClose();
   };
 
   const handleAddTask = () => {
-    onClose();
+    if (
+      userDetails.name !== "" ||
+      userDetails.phone !== "" ||
+      userDetails.email !== ""
+    ) {
+      setProfileDetails(userDetails);
+      onClose();
+    } else {
+      alert("Please Enter All Required fields");
+    }
   };
   const [currentStep, setCurrentStep] = useState("basic");
 
@@ -31,6 +39,13 @@ const AddProfile = ({ onClose }) => {
   return (
     <div className=" add-task-container popup-background">
       <div className=" popup-content pop-width">
+        <div className="add-flx">
+          <strong>Add New Profile</strong>
+          <button className="login-button" onClick={handleClose}>
+            X
+          </button>
+        </div>
+
         <div className="flx-row flex-inp-column">
           <div className="step-header">
             <div
@@ -50,11 +65,13 @@ const AddProfile = ({ onClose }) => {
             <div className="flx-col pd">
               <div className="sp-even  pd">
                 <div>
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="name">Enter Name*</label>
                 </div>
                 <div>
                   <input
+                    className="inp-pd"
                     type="text"
+                    placeholder="Eg. Manish Gupta"
                     required
                     onChange={(e) =>
                       setUserDetails({ ...userDetails, name: e.target.value })
@@ -65,10 +82,12 @@ const AddProfile = ({ onClose }) => {
               </div>
               <div className="sp-even  pd">
                 <div>
-                  <label htmlFor="assignee">Email</label>
+                  <label htmlFor="assignee">Enter Email*</label>
                 </div>
                 <div>
                   <input
+                    placeholder="Eg. manish.info2020@gmail.com"
+                    className="inp-pd"
                     type="text"
                     required
                     onChange={(e) =>
@@ -83,10 +102,12 @@ const AddProfile = ({ onClose }) => {
               </div>
               <div className="sp-even  pd">
                 <div>
-                  <label htmlFor="type">Phone</label>
+                  <label htmlFor="type">Enter Phone*</label>
                 </div>
                 <div>
                   <input
+                    placeholder="Eg. 7739464193"
+                    className="inp-pd"
                     type="number"
                     required
                     onChange={(e) =>
@@ -96,23 +117,27 @@ const AddProfile = ({ onClose }) => {
                   />
                 </div>
               </div>
-              <button className="btn btn-next cursor" onClick={handleNext}>
+            </div>
+          )}
+          {currentStep === "basic" && (
+            <div className="flx-end">
+              <button className="login-button" onClick={handleNext}>
                 Next
               </button>
             </div>
           )}
-          <div className="flx-col pd"></div>
-
           {currentStep === "social" && (
             <div className="flx-col pd">
               <div className="sp-even  pd">
                 <div>
-                  <label htmlFor="insta-link">Instagram Link </label>
+                  <label htmlFor="insta-link">Instagram Link(Optional) </label>
                 </div>
                 <div>
                   <input
+                    className="inp-pd"
                     type="text"
                     required
+                    placeholder="Eg. https://www.instagram.com/manish_gupta416/"
                     onChange={(e) =>
                       setUserDetails({
                         ...userDetails,
@@ -125,11 +150,13 @@ const AddProfile = ({ onClose }) => {
               </div>
               <div className="sp-even  pd">
                 <div>
-                  <label htmlFor="youtube-link">Youtube Link </label>
+                  <label htmlFor="youtube-link">Youtube Link(Optional) </label>
                 </div>
                 <div>
                   <input
+                    placeholder="Eg. https://www.youtube.com/manish_gupta416/"
                     type="text"
+                    className="inp-pd"
                     required
                     onChange={(e) =>
                       setUserDetails({
@@ -143,11 +170,8 @@ const AddProfile = ({ onClose }) => {
               </div>
 
               <div className="sp-btw sp-even">
-                <button className="btn btn-sv cursor" onClick={handleAddTask}>
+                <button className="login-button" onClick={handleAddTask}>
                   Save
-                </button>
-                <button className="btn btn-x cursor" onClick={handleClose}>
-                  Cancel
                 </button>
               </div>
             </div>

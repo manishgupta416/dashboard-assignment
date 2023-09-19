@@ -7,14 +7,18 @@
 .sp-even {
   display: flex;
   width: 100%;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 10px;
 }
 .sp-btw {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-
+.inp-pd {
+  padding: 5px 20px;
+}
 .popup-background {
   position: fixed;
   top: 0;
@@ -107,4 +111,16 @@
   background-color: #007bff;
   color: #fff;
   border: none;
+}
+.add-flx {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.flx-end {
+  display: flex;
+  justify-content: end;
+  width: 100%;
 }
