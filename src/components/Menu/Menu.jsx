@@ -10,7 +10,7 @@ const Menu = ({ onClose }) => {
     onClose();
   };
   return (
-    <div className=" add-task-container popup-background">
+    <div className=" add-task-container popup-background some-width">
       <div className=" popup-content pop-width">
         <div className="add-flx">
           <button className="login-button" onClick={handleClose}>
@@ -18,7 +18,7 @@ const Menu = ({ onClose }) => {
           </button>
         </div>
 
-        <div className="flx-row flex-inp-column menu-width">
+        <div className="flx-row flex-inp-column menu-width ">
           <div className="left-menu-side">
             <div className="menu-contain">
               <div className="board">Board</div>

@@ -1,7 +1,7 @@
 @media screen and (max-width: 912px) {
   .bar-c .bar-chart-g {
-    width: 250px !important; /* Use !important to ensure it overrides inline styles */
-    height: 200px !important; /* Use !important to ensure it overrides inline styles */
+    width: 250px !important;
+    height: 200px !important;
   }
 }
 @media screen and (max-width: 390px) {

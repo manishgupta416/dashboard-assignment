@@ -291,16 +291,16 @@
   font-weight: bolder;
 }
 .g-dot {
-  width: 20px; /* Set the width */
-  height: 20px; /* Set the height */
-  background-color: #e25535; /* Set the background color */
-  border-radius: 50%; /* Make it round */
+  width: 20px;
+  height: 20px;
+  background-color: #e25535;
+  border-radius: 50%;
 }
 .u-dot {
-  width: 20px; /* Set the width */
-  height: 20px; /* Set the height */
-  background-color: #86efac; /* Set the background color */
-  border-radius: 50%; /* Make it round */
+  width: 20px;
+  height: 20px;
+  background-color: #86efac;
+  border-radius: 50%;
 }
 .dot-flx {
   display: flex;
@@ -309,34 +309,34 @@
   gap: 10px;
 }
 .Polkadot {
-  width: 20px; /* Set the width */
-  height: 20px; /* Set the height */
-  background-color: cyan; /* Set the background color */
-  border-radius: 50%; /* Make it round */
+  width: 20px;
+  height: 20px;
+  background-color: cyan;
+  border-radius: 50%;
 }
 .Solana {
-  width: 20px; /* Set the width */
-  height: 20px; /* Set the height */
-  background-color: purple; /* Set the background color */
-  border-radius: 50%; /* Make it round */
+  width: 20px;
+  height: 20px;
+  background-color: purple;
+  border-radius: 50%;
 }
 .Cardano {
-  width: 20px; /* Set the width */
-  height: 20px; /* Set the height */
-  background-color: yellow; /* Set the background color */
-  border-radius: 50%; /* Make it round */
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  border-radius: 50%;
 }
 .Ethereum {
-  width: 20px; /* Set the width */
-  height: 20px; /* Set the height */
-  background-color: blue; /* Set the background color */
-  border-radius: 50%; /* Make it round */
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
 }
 .bitcoin {
-  width: 20px; /* Set the width */
-  height: 20px; /* Set the height */
-  background-color: red; /* Set the background color */
-  border-radius: 50%; /* Make it round */
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
 }
 .dough {
   display: flex;
@@ -402,6 +402,10 @@
   .none {
     display: none;
   }
+  .pop-width-menu {
+    width: 50%;
+    overflow-y: scroll;
+  }
   .full-width {
     width: 100vw;
   }
@@ -428,11 +432,17 @@
   .srch-none {
     display: none;
   }
+  .em-inp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 597px) {
   .nav {
     flex-wrap: wrap;
   }
+
   .srch-none {
     display: none;
   }
@@ -458,8 +468,36 @@
   }
 }
 .menu-ic {
-  display: flex;
+  /* display: flex; */
   gap: 10px;
   font-size: xx-large;
   color: blue;
+}
+
+@media screen and (max-width: 444px) {
+  .logo {
+    width: 100%;
+  }
+  .pop-width {
+    width: auto;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 336px) {
+  .board {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+}
+@media screen and (max-width: 440px) {
+  .pop-width {
+    width: 50%;
+    overflow-y: scroll;
+  }
+  .some-width {
+    width: 0;
+  }
+  .popup-background {
+    width: 100%;
+  }
 }

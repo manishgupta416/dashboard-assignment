@@ -83,7 +83,7 @@ const SignIn = () => {
               </div>
             </div>
             <div className="login-inp-contai">
-              <div className="login-inp bold">
+              <div className="login-inp bold em-inp">
                 <div>
                   <label htmlFor="name">Email address</label>
                 </div>

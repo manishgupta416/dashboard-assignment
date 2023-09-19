@@ -43,7 +43,7 @@ const BarGraph = () => {
             position: "right",
           },
           tooltips: {
-            enabled: true, // Enable tooltips
+            enabled: true,
           },
         }}
         style={{ width: "500px", height: "400px" }}

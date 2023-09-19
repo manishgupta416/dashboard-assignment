@@ -124,3 +124,6 @@
   justify-content: end;
   width: 100%;
 }
+.some-width {
+  width: auto;
+}

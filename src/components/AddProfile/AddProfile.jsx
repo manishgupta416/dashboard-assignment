@@ -37,8 +37,8 @@ const AddProfile = ({ onClose }) => {
   };
 
   return (
-    <div className=" add-task-container popup-background">
-      <div className=" popup-content pop-width">
+    <div className=" add-task-container popup-background ">
+      <div className=" popup-content pop-width pop-width-menu">
         <div className="add-flx">
           <strong>Add New Profile</strong>
           <button className="login-button" onClick={handleClose}>

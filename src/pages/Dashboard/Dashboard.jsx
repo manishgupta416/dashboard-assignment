@@ -108,9 +108,9 @@ const Dashboard = ({ userDetails }) => {
 
         <div className="right-side">
           <div className="nav">
-            <div className="menu-ic">
+            <div className="menu-ic menu-hide">
               <span onClick={toggleMenu}>
-                <MdMenu className="menu-ic" />
+                <MdMenu className="menu-ic menu-hide" />
               </span>
             </div>
             <div className="nav-heading"> Dashboard</div>

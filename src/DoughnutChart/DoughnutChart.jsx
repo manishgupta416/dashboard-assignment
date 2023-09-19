@@ -1,6 +1,6 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import "./DoughnutChart.css"; // Create a CSS file for styling
+import "./DoughnutChart.css";
 
 const DoughnutChart = () => {
   const data = {
