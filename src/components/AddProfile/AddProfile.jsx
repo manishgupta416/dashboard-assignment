@@ -113,7 +113,7 @@ const AddProfile = ({ onClose }) => {
                     onChange={(e) =>
                       setUserDetails({ ...userDetails, phone: e.target.value })
                     }
-                    value={userDetails.type}
+                    value={userDetails.phone}
                   />
                 </div>
               </div>

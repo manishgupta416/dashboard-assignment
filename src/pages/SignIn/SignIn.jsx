@@ -82,15 +82,44 @@ const SignIn = () => {
                 <span> Sign in with Apple</span>
               </div>
             </div>
-
-            <div className="login-items">
+            <div className="login-inp-contai">
+              <div className="login-inp bold">
+                <div>
+                  <label htmlFor="name">Email address</label>
+                </div>
+                <div>
+                  <input
+                    className="inp-pd lg-inp"
+                    type="text"
+                    // placeholder="Eg. Manish Gupta"
+                    required
+                    placeholder="manish.info2020@gmail.com"
+                  />
+                </div>
+              </div>
+              <div className="login-inp bold">
+                <div>
+                  <label htmlFor="name">Password</label>
+                </div>
+                <div>
+                  <input
+                    className="inp-pd lg-inp"
+                    type="password"
+                    // placeholder="Eg. Manish Gupta"
+                    required
+                    placeholder="1234568"
+                  />
+                </div>
+              </div>
+              <div className="forgot-pass">Forgot Password?</div>
               <button
-                className="login-button"
+                className="login-button lg-btn"
                 onClick={() => loginWithRedirect()}
               >
                 Log In
               </button>
-
+            </div>
+            <div className="login-items">
               <div className="login-footer">
                 <p>Don't have an account ? </p>
 
@@ -98,7 +127,7 @@ const SignIn = () => {
                   className="login-button"
                   onClick={() => loginWithRedirect()}
                 >
-                  Sign Up
+                  Register here
                 </button>
               </div>
             </div>

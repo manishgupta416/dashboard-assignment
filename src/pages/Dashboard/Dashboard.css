@@ -28,6 +28,7 @@
   width: 200px;
   justify-content: space-around;
   height: 60px;
+  align-items: flex-start;
   flex-direction: column;
   color: white;
   font-weight: bold;
@@ -192,11 +193,13 @@
   box-shadow: -2px 1px 8px 3px rgba(0, 0, 0, 0.1);
   border-radius: 14px;
   height: 100%;
+  flex-wrap: wrap;
 }
 .pie {
   width: 100%;
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .pie-chart {
   display: block;
@@ -241,8 +244,14 @@
 .cont {
   display: flex;
   gap: 20px;
+  justify-content: space-around;
+  align-items: center;
 }
-
+.cont-socil {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 .nav-heading {
   font-size: 40px;
   font-weight: bolder;
@@ -341,4 +350,20 @@
 
 .add-icon {
   font-size: xx-large;
+}
+.wa {
+  color: #25d366;
+  font-size: large;
+}
+.yt {
+  color: #ff0000;
+  font-size: large;
+}
+.inst {
+  color: purple;
+  font-size: large;
+}
+.em {
+  color: #d14836;
+  font-size: large;
 }

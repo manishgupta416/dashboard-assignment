@@ -12,6 +12,10 @@ import { PiUsersBold } from "react-icons/pi";
 import { BiLike } from "react-icons/bi";
 import { CiMoneyBill } from "react-icons/ci";
 import { GrAddCircle } from "react-icons/gr";
+import { BsWhatsapp } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import { FaInstagram } from "react-icons/fa";
+import { GrYoutube } from "react-icons/gr";
 import BarGraph from "../../components/BarGraph/BarGraph";
 import DoughnutChart from "../../DoughnutChart/DoughnutChart";
 import { DataContext } from "../../context/DataContext";
@@ -224,15 +228,40 @@ const Dashboard = ({ userDetails }) => {
             <div className="profile-conatiner">
               {showProfile && Object.keys(profileDetails).length !== 0 ? (
                 <div className="wi">
-                  <div>{profileDetails?.name}</div>
+                  <div className="bold">{profileDetails?.name}</div>
                   <div className="flx">
                     <div className="cont">
-                      <div>{profileDetails?.phone}</div>
-                      <div>{profileDetails?.email}</div>
+                      <div className="cont-socil">
+                        {" "}
+                        <span className="wa">
+                          <BsWhatsapp />
+                        </span>
+                        {profileDetails?.phone}
+                      </div>
+                      <div className="cont-socil">
+                        <span className="em">
+                          <MdEmail />
+                        </span>
+                        {profileDetails?.email}
+                      </div>
                     </div>
                     <div className="cont">
-                      <div>{profileDetails?.instagram}</div>
-                      <div>{profileDetails?.youtube}</div>
+                      {profileDetails?.instagram && (
+                        <div className="cont-socil">
+                          <span className="inst">
+                            <FaInstagram />
+                          </span>
+                          {profileDetails?.instagram}
+                        </div>
+                      )}
+                      {profileDetails?.youtube && (
+                        <div className="cont-socil">
+                          <span className="yt">
+                            <GrYoutube />
+                          </span>
+                          {profileDetails?.youtube}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
