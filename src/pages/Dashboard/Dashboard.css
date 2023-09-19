@@ -374,6 +374,9 @@
   .activities-graph {
     height: 59vh;
   }
+  .pie-chart {
+    width: 100vw;
+  }
   .bar-c {
     height: 240px;
     width: 381px;
@@ -399,8 +402,17 @@
   .none {
     display: none;
   }
+  .full-width {
+    width: 100vw;
+  }
+  .card-full-width {
+    width: 50vw;
+  }
   .menu-ic {
     display: block;
+  }
+  .pie-chart {
+    width: 100vw;
   }
   .menu-width {
     min-width: 157vh;
@@ -409,6 +421,9 @@
 @media screen and (max-width: 549px) {
   .nav {
     flex-wrap: wrap;
+  }
+  .pie-chart {
+    width: 100vw;
   }
   .srch-none {
     display: none;
@@ -421,6 +436,9 @@
   .srch-none {
     display: none;
   }
+  .pie-chart {
+    width: 100vw;
+  }
   .inp-res {
     width: 100px;
   }
@@ -429,10 +447,19 @@
   .txt-none {
     display: none;
   }
+  .pie-chart {
+    width: 100vw;
+  }
   .g-a {
     padding: 0;
   }
   .inp-res {
     width: 30px;
   }
+}
+.menu-ic {
+  display: flex;
+  gap: 10px;
+  font-size: xx-large;
+  color: blue;
 }

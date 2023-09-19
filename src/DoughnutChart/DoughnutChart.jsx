@@ -1,5 +1,6 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
+import "./DoughnutChart.css"; // Create a CSS file for styling
 
 const DoughnutChart = () => {
   const data = {
@@ -12,13 +13,17 @@ const DoughnutChart = () => {
   };
 
   const options = {
-    responsive: false,
+    responsive: true,
     maintainAspectRatio: false,
     height: 150,
     width: 300,
   };
 
-  return <Doughnut data={data} options={options} />;
+  return (
+    <div className="doughnut">
+      <Doughnut className="doughnut-chart" data={data} options={options} />
+    </div>
+  );
 };
 
 export default DoughnutChart;

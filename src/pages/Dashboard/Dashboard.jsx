@@ -110,7 +110,7 @@ const Dashboard = ({ userDetails }) => {
           <div className="nav">
             <div className="menu-ic">
               <span onClick={toggleMenu}>
-                <MdMenu />
+                <MdMenu className="menu-ic" />
               </span>
             </div>
             <div className="nav-heading"> Dashboard</div>
@@ -203,7 +203,7 @@ const Dashboard = ({ userDetails }) => {
                 <div className="acti">Activities</div>
                 <div>May - June 2023</div>
               </div>
-              <div className="bar-g-right">
+              <div className="bar-g-right res-flx">
                 <div className="dot-flx">
                   {" "}
                   <div class="g-dot"></div>Guest
@@ -248,7 +248,7 @@ const Dashboard = ({ userDetails }) => {
               </div>
             </div>
 
-            <div className="profile-conatiner">
+            <div className="profile-conatiner full-width">
               {showProfile && Object.keys(profileDetails).length !== 0 ? (
                 <div className="wi">
                   <div className="bold">{profileDetails?.name}</div>

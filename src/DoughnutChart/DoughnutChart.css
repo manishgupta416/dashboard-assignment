@@ -19,3 +19,19 @@
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 442px) {
+  .doughnut .doughnut-chart {
+    width: 171px !important;
+    height: 91px !important;
+  }
+  /* Additional styling for responsive layout */
+  .pie-chart {
+    width: 100vw;
+  }
+  .pie-flx {
+    flex-direction: column;
+  }
+  .label {
+    justify-content: center;
+  }
+}

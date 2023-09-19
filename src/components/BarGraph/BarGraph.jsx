@@ -26,9 +26,9 @@ const BarGraph = () => {
   };
 
   return (
-    <div className="bar-c " style={{ width: "500px", height: "400px" }}>
+    <div className="bar-c" id="chart">
       <Bar
-        className="canvas"
+        className="canvas bar-chart-g"
         data={state}
         options={{
           responsive: true,
@@ -46,8 +46,7 @@ const BarGraph = () => {
             enabled: true, // Enable tooltips
           },
         }}
-        // width={500}
-        // height={300}
+        style={{ width: "500px", height: "400px" }}
       />
     </div>
   );

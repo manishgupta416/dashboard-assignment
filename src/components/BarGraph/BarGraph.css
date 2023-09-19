@@ -1,1 +1,15 @@
-
+@media screen and (max-width: 912px) {
+  .bar-c .bar-chart-g {
+    width: 250px !important; /* Use !important to ensure it overrides inline styles */
+    height: 200px !important; /* Use !important to ensure it overrides inline styles */
+  }
+}
+@media screen and (max-width: 390px) {
+  .bar-c .bar-chart-g {
+    width: 169px !important;
+    height: 166px !important;
+  }
+  .res-flx {
+    flex-direction: column;
+  }
+}
