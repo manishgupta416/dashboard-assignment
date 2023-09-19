@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+<p align="center" >
+<img src="https://cdn-icons-png.flaticon.com/512/3368/3368022.png" width="150px" height="150px"  >
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center" >
+<h1 >⚛️ Dashboard ⚛️</h1>
+</div>
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+Dashboard is a web-application made with react js where user can login with google , can create new account to see dashboard page, on dasboard page user can see bar-chart , doughnut chart , add profile , logout and also this web application is responsive.
 
-### `npm start`
+## 🚀 Live Link
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Dashboard](https://dashboard-assignment-v1.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- Frontend : React Js , React Context API , useState , React Router , auth0/auth0-react , Vanilla CSS , react-chartjs-2 chart.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+1. Clone the repository.
+   `https://github.com/manishgupta416/dashboard-assignment`
+2. Install dependencies using `npm install`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the development server with `npm start`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Contributions are welcome! To contribute to the project, follow these steps:
 
-### `npm run eject`
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the main repository.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contact
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For any questions or feedback, please contact [Manish Kumar]`(https://github.com/manishgupta416/).`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<h3 align="center">Connect with me 🤝 </h3>
+<div align="center">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[![image](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/imanishgupta1/)
+[![image](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/manish_gupta416)
 
-## Learn More
+[![image](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:manish.info2020@gmail.com)
+[![image](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/manish_gupta416/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</div>
